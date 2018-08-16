@@ -47,7 +47,12 @@ limitations under the License.
         <!-- The px-context-browser and px-breadcrumbs can be used in combination to provide both the traditional drilldown navigation
             as well as an interactive breadcrumb for quick navigation throughout the hierarchy. Place them both in a flex--row so that
             they appear next to each other in a container. -->
-
+<div class="layout">
+  <!-- Layout Item - Child element(s) -->
+  <div class="layout__item"></div>
+  
+  <div class="layout__item"></div>
+</div>
         <div class="context-browser shadow-navigation u-ph flex flex--row flex--middle">
           <px-context-browser-trigger trigger="{{openTrigger}}"></px-context-browser-trigger>
           <px-context-browser-trigger trigger="{{favoritedTrigger}}" favorited></px-context-browser-trigger>

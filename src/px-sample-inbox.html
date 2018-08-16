@@ -30,23 +30,20 @@ limitations under the License.
   <template>
     <style include="px-sample-app-styles"></style>
 
-    <px-inbox on-selected-item-changed="_updateInboxDetails" list-items="{{listItems}}">
+    
 
       <!-- Any content passed inside of the px-inbox tag is automatically inserted into the right hand content side of the screen.
            In this case, we create a mocked up detail view that is bound to the selections made in the px-inbox list on the left. -->
 
-      <div class="heading--page u-p">{{title}}</div>
-      <div class="flex flex--wrap flex--justify u-p">
-        <span class="u-1/3-desk-and-up u-pr++ u-mb-">Donec sed odio dui. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</span>
-        <div class="u-1/3-desk-and-up u-pr++ u-mb-">
+      
+      <div class="flex flex--wrap flex--justify u-mh++">
+        <span class="u-1/3-desk-and-up u-pr++ u-mv+">Donec sed odio dui. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</span>
+        <div class="u-1/3-desk-and-up u-pr++ u-mv+">
           <px-key-value-pair class="u-mv" key="Alert ID" value="{{alertId}}" size="delta"></px-key-value-pair>
           <px-key-value-pair class="u-mv" key="Alert Source" value="{{alertSource}}" size="delta"></px-key-value-pair>
         </div>
-        <div class="u-1/3-desk-and-up u-pr++ u-mb-">
-          <px-key-value-pair class="u-mv" key="Received Date/Time" value="{{receivedDateTime}}" size="delta"></px-key-value-pair>
-          <px-key-value-pair class="u-mv" key="Case Number" value="{{caseNumber}}" size="delta"></px-key-value-pair>
-        </div>
       </div>
+	  
       <div class="u-p">
         <span class="heading--subsection">Customer Information</span>
         <div class="flex flex--row flex--wrap flex--justify">
@@ -57,6 +54,8 @@ limitations under the License.
         </div>
       </div>
 
+		  <div class="u-mh+">
+		  <div class="flex u-mv++">
       <px-card class="light-card" header-text="Evidence 1" icon="px-fea:analytics">
         <px-icon slot='actions' icon='px-utl:app-settings'></px-icon>
         <px-vis-radar
@@ -68,21 +67,9 @@ limitations under the License.
           hide-axis-register>
         </px-vis-radar>
       </px-card>
-
-      <px-card class="light-card" header-text="Evidence 2" icon="px-fea:analytics">
-        <px-icon slot='actions' icon='px-utl:app-settings'></px-icon>
-        <px-vis-polar
-          width="500"
-          height="500"
-          chart-data="[[chartData2]]"
-          series-config="[[seriesConfig]]"
-          hide-register
-          use-degrees>
-        </px-vis-polar>
-      </px-card>
+</div>
+</div>
       <!-- end of mock px-inbox detail view -->
-
-    </px-inbox>
 
   </template>
 </dom-module>
