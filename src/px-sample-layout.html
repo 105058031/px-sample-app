@@ -116,13 +116,36 @@ limitations under the License.
               <button class="btn btn--call-to-action u-mv+">Submit</button>
             </div>
           </div>
-
+		  <div class="u-mh+">
+		  <div class="flex u-mv++">
+		<iron-ajax
+		auto
+		url="http://10.96.126.119:8080/returnfilesTable.php?argument1=infinity"
+		handle-as="json"
+		on-response="handleResponse"
+		debounce-duration="300"></iron-ajax>
           <px-card class="light-card" header-text="Fleet" icon="px-obj:steam-turbine">
             <px-icon slot='actions' icon='px-utl:app-settings'></px-icon>
-            <px-data-grid table-data='[[tableData]]' hide-action-menu>
+            <px-data-grid table-data='[[tableData]]' hide-action-menu
+			columns='[{"name":"Filename","path":"name","renderer":"px-data-grid-string-renderer","flexGrow":"2.5","frozen":false,"id":"first[string]"},
+			{"name":"Download","path":"image","renderer":"px-data-grid-string-renderer","flexGrow":"1","frozen":false,"id":"image[string]"},
+			{"name":"Day","path":"day","flexGrow":"1","frozen":false,"id":"day[string]"},
+			{"name":"Vendor Name","path":"vendor","flexGrow":"2","frozen":false,"id":"vendor[string]"},
+			{"name":"Vendor Code","path":"code","flexGrow":"1","frozen":false,"id":"code[string]"},
+			{"name":"PO Number","path":"po","flexGrow":"1","frozen":false,"id":"po[string]"},
+			{"name":"PO Line","path":"poline","flexGrow":"0.5","frozen":false,"id":"poline[string]"}]'
+			multi-sort
+			resizable
+			flexGrow="1"
+			columnWidth="120px"
+			auto-filter
+			column-reordering-allowed
+			allow-sort-by-selection
+			>
             </px-data-grid>
           </px-card>
-
+		  </div>
+			</div>
         </div>
 
         <!-- Container for the content of the 2nd px-tab -->

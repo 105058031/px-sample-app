@@ -40,8 +40,8 @@
           return [
             { label: "Europe", id: "Europe" },
             {
-              label: "Klingon Spaceship",
-              id: "Klingon Spaceship",
+              label: "North America",
+              id: "North_America",
               children: [
                 {
                   label: "Canada",
@@ -223,7 +223,7 @@
       selectedRoute: {
         type: Array,
         value: function() {
-          return ["Klingon Spaceship", "United_States", "Nevada", "Reno Plant 2", "XY12367"];
+          return ["North_America", "United_States", "Nevada", "Reno Plant 2", "XY12367"];
         },
         observer: "getSelection"
       },
